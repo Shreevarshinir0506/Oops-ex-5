@@ -1,0 +1,33 @@
+
+package converter;
+
+public class MeterToKmConverter {
+    public static double convert(double meters) {
+        return meters / 1000;
+    }
+}
+package converter;
+
+public class MilesToKmConverter {
+    public static double convert(double miles) {
+        return miles * 1.60934;
+    }
+}
+
+
+java
+import converter.MeterToKmConverter;
+import converter.MilesToKmConverter;
+
+public class DistanceConverterApp {
+    public static void main(String[] args) {
+        double meters = 1000;
+        double miles = 10;
+
+        double kmFromMeters = MeterToKmConverter.convert(meters);
+        double kmFromMiles = MilesToKmConverter.convert(miles);
+
+        System.out.println(meters + " meters is equal to " + kmFromMeters + " kilometers.");
+        System.out.println(miles + " miles is equal to " + kmFromMiles + " kilometers.");
+    }
+}
